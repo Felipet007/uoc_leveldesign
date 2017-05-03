@@ -9,7 +9,7 @@ public class PotionTrigger : MonoBehaviour {
     {
         if (c.CompareTag("Player") == false) return;
 
-        PlayerHealth health = c.GetComponent<PlayerHealth>();
+		CompleteProject.PlayerHealth health = c.GetComponent<CompleteProject.PlayerHealth>();
 
         int hp = health.currentHealth;
         hp += healAmount;
