@@ -12,7 +12,7 @@ public class TriggerEnemySpawn : MonoBehaviour {
         public int quantity;
     }
 
-    public List<EnemySpawn> groups;
+    public List<EnemySpawn> groups = new List<EnemySpawn>();
 
 	void OnTriggerEnter(Collider c)
     {
@@ -32,6 +32,7 @@ public class TriggerEnemySpawn : MonoBehaviour {
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
+        if (groups == null) groups = new List<EnemySpawn>();
         foreach (EnemySpawn spawn in groups)
         {
             Gizmos.DrawSphere(transform.position + spawn.offset, 0.5f);

@@ -9,13 +9,13 @@ namespace CompleteProject
         public float smoothing = 5f;        // The speed with which the camera will be following.
 
 
-        Vector3 offset;                     // The initial offset from the target.
+        public Vector3 offset;                     // The initial offset from the target.
 
 
         void Start ()
         {
             // Calculate the initial offset.
-            offset = transform.position - target.position;
+            //offset = transform.position - target.position;
         }
 
 
